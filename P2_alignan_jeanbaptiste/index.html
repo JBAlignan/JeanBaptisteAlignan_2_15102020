@@ -15,21 +15,23 @@
                 <img src="Projet 2 - Reservia/images/logo/Reservia@3x.png" title="Reservia" alt="Logo Reservia" id="logo">
                 <nav>
                     <ul>
-                        <li>Hébergements</li>
-                        <li>Activités</li>
+                        <li><a href="#hebergements">Hébergements</a></li>
+                        <li><a href="#activites">Activités</a></li>
                         <li>S'inscrire</li>
                     </ul>
                 </nav>
             </div>
             <div>
-                <span>Trouvez votre hébergement pour des vacances de rêve</span>
-                <span>En plein centre ville ou en pleine nature</span>
+                <div id="headerSpan">
+                    <span>Trouvez votre hébergement pour des vacances de rêve</span>
+                    <span>En plein centre ville ou en pleine nature</span>
+                </div>
                 <div id="searchTown">
                     <figure id="placeholder">
-                        <img src="Projet 2 - Reservia/images/icones/placeholder.png">
+                        <img  src="Projet 2 - Reservia/images/icones/map-marker-alt-solid.svg" height="20px" width="20px">
                     </figure>
-                    <input type="text">
-                    <input type="button">
+                    <input type="text" id="searchText">
+                    <input type="button" value="Rechercher" id="searchButton">
                 </div>
                 <div>
                     <span>Filtres</span>
@@ -45,33 +47,33 @@
         Recherche des héergements et annonces les plus populaires-->
         <section id="sectionOne">
             <article class="container">
-                <h2>Hébergements à Marseille</h2>
+                <h2 id="hebergements">Hébergements à Marseille</h2>
                 <div>
                     <div class="lodging">
                         <figure class="imageTown">
-                            <img src="">
+                            <img src="Projet 2 - Reservia/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg">
                             <figcaption></figcaption>
                         </figure>
                         <figure class="imageTown">
-                            <img src="">
+                            <img src="Projet 2 - Reservia/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg">
                             <figcaption></figcaption>
                         </figure class="imageTown">
                         <figure class="imageTown">
-                            <img src="">
+                            <img src="Projet 2 - Reservia/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg">
                             <figcaption></figcaption>
                         </figure>
                     </div>
                     <div class="lodging">
                         <figure class="imageTown">
-                            <img src="">
+                            <img src="Projet 2 - Reservia/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
                             <figcaption></figcaption>
                         </figure>
                         <figure class="imageTown">
-                            <img src="" alt="">
+                            <img src="Projet 2 - Reservia/images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="">
                         <figcaption></figcaption>
                         </figure>
                         <figure class="imageTown">
-                            <img src="">
+                            <img src="Projet 2 - Reservia/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg">
                             <figcaption></figcaption>
                         </figure>
                     </div>
@@ -101,7 +103,7 @@
         <!--Deuxième section
         Les activités de la ville-->
         <section>
-            <h2>Activités à Marseille</h2>
+            <h2 id="activites">Activités à Marseille</h2>
             <div class="activities">
                 <div>
                     <figure class="imageTown">

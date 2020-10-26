@@ -24,6 +24,11 @@ nav ul li{
     padding: 30px 0 20px 0;
 }
 
+#headerSpan{
+    display: flex;
+    flex-direction: column;
+}
+
 #searchTown{
     display: flex;
     align-items: center;
@@ -33,6 +38,22 @@ nav ul li{
 #placeholder{
     margin-right: 0;
     margin-left: 0;
+    padding: 6px 10px 6px 10px;
+    background-color:  #F2F2F2;
+    border-radius: 15px 0 0 15px;
+    border: 1px solid black;
+}
+
+#searchText{
+    padding: 10px 0 10px 0;
+}
+
+#searchButton{
+    background-color: #0065FC;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 10px 10px 10px 10px;
+    border-radius: 0 15px 15px 0;
 }
 
 #sectionOne{
@@ -54,10 +75,14 @@ nav ul li{
 
 .lodging{
     display: flex;
+    justify-content:space-around;
+    align-content: center;
     }
 
 .imageTown{
-    width: 33%;
+    width: 50%;
+    height: 200px;
+    overflow: hidden;
     border: 1px solid black;
 }
 
@@ -65,6 +90,11 @@ nav ul li{
     display: flex;
     justify-content: space-around;
     border: 1px solid black;
+}
+
+.imageTown img{
+    width: 300px;
+    height: 200px;
 }
 
 footer{
