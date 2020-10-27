@@ -3,15 +3,30 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <!-- Open Graph data -->
+        <meta property="og:title" content="Reservia"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="http://www.reservia.com/"/>
+        <meta property="og:image" content="http://example.com/image.jpg"/>
+        <meta property="og:description" content="Trouvez votre hébergement pour des vacances de rêve"/>
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="Rerservia, le site de location d'hébergements en France">
+        <meta name="twitter:site" content="@publisher_handle">
+        <meta name="twitter:title" content="Reservia">
+        <meta name="twitter:description" content="Trouvez votre hébergement pour des vacances de rêve">
+        <meta name="twitter:creator" content="Jean-Baptiste ALIGNAN">
+        <!-- Twitter Summary card images must be at least 200x200px -->
+        <meta name="twitter:image" content="http://www.example.com/image.jpg">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Reservia</title>
     </head>
 
     <body>
 
         <header>
-            <div id="navOne">
+            <div>
                 <img src="Projet 2 - Reservia/images/logo/Reservia@3x.png" title="Reservia" alt="Logo Reservia" id="logo">
                 <nav>
                     <ul>
@@ -21,64 +36,73 @@
                     </ul>
                 </nav>
             </div>
-            <div>
-                <div id="headerSpan">
-                    <span>Trouvez votre hébergement pour des vacances de rêve</span>
-                    <span>En plein centre ville ou en pleine nature</span>
-                </div>
-                <div id="searchTown">
+                
+                    <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                    <p>En plein centre ville ou en pleine nature</p>
+                
+                <form method="POST" action="traitement.php">
                     <figure id="placeholder">
                         <img  src="Projet 2 - Reservia/images/icones/map-marker-alt-solid.svg" height="20px" width="20px">
                     </figure>
-                    <input type="text" id="searchText">
-                    <input type="button" value="Rechercher" id="searchButton">
-                </div>
-                <div>
-                    <span>Filtres</span>
-                    <input type="button">
-                    <input type="button">
-                    <input type="button">
-                </div>
-            </div>
+                    <input type="text" name="town" id="town">
+                    <input type="submit" value="Rechercher">
+                </form>
+
+                <form method="POST" action="traitement.php">
+                    <p>Filtres</p>
+                    <input type="checkbox" name="economic" id="economic">
+                    <label for="economic"><img  src="Projet 2 - Reservia/images/icones/money-bill-wave-solid.svg" class="icons">&#201;conomique</label>
+                    <input type="checkbox" name="family" id="family">
+                    <label for="family"><img  src="Projet 2 - Reservia/images/icones/child-solid.svg">Familiale</label>
+                    <input type="checkbox" name="romantic" id="romantic">
+                    <label for="romantic"><img  src="Projet 2 - Reservia/images/icones/heart-solid.svg" class="icons">Romantique</label>
+                    <input type="checkbox" name="pet" id="pet">
+                    <label for="pet"><img  src="Projet 2 - Reservia/images/icones/dog-solid.svg" class="icons">Animaux autorisés</label>
+                </form>
         </header>
 
 
         <!--Première section
         Recherche des héergements et annonces les plus populaires-->
-        <section id="sectionOne">
-            <article class="container">
-                <h2 id="hebergements">Hébergements à Marseille</h2>
-                <div>
-                    <div class="lodging">
-                        <figure class="imageTown">
+        <section>
+            <article>
+                <h2>Hébergements à Marseille</h2>
+                    <div>
+                        <figure>
                             <img src="Projet 2 - Reservia/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg">
-                            <figcaption></figcaption>
+                            <figcaption>Auberge la Cannebière<br>
+                                        Nuit à partir de 25€<br>
+                                        <i class="fas fa-camera"></i>
+                                        </figcaption>
                         </figure>
-                        <figure class="imageTown">
+                        <figure>
                             <img src="Projet 2 - Reservia/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg">
-                            <figcaption></figcaption>
-                        </figure class="imageTown">
-                        <figure class="imageTown">
+                            <figcaption>Hôtel du Port<br>
+                                        Nuit à partir de 52€</figcaption>
+                        </figure>
+                        <figure>
                             <img src="Projet 2 - Reservia/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg">
-                            <figcaption></figcaption>
-                        </figure>
-                    </div>
-                    <div class="lodging">
-                        <figure class="imageTown">
+                            <figcaption>Hôtel Les Mouettes<br>
+                                        Nuit à partir de 76€</figcaption>
+                        </figure>                                       
+                        <figure>
                             <img src="Projet 2 - Reservia/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg">
-                            <figcaption></figcaption>
+                            <figcaption>Hôtel de la mer<br>
+                                        Nuit à partir de 46€<br>
+                                        </figcaption>
                         </figure>
-                        <figure class="imageTown">
+                        <figure>
                             <img src="Projet 2 - Reservia/images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="">
-                        <figcaption></figcaption>
+                        <figcaption>Hôtel Le Panier<br>
+                                    Nuit à partir de 23€</figcaption>
                         </figure>
-                        <figure class="imageTown">
+                        <figure>
                             <img src="Projet 2 - Reservia/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg">
-                            <figcaption></figcaption>
+                            <figcaption>Hôtel chez Amina<br>
+                                        Nuit à partir de 96€</figcaption>
                         </figure>
-                    </div>
-                </div>
-                <span>Afficher plus</span>
+                    </div>                   
+                <p>Afficher plus</p>
             </article>
             
             <aside class="containerTwo">
