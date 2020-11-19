@@ -28,13 +28,24 @@
     <body>
 
         <header>
-            <div>
+            <div id="menuDesktop">
                 <img src="Projet2-Reservia/images/logo/Reservia@3x.png" title="Reservia" alt="Logo Reservia" id="logo">
                 <nav>
                     <ul>
                         <li><a href="#hebergements">Hébergements</a></li>
                         <li><a href="#activites">Activités</a></li>
                         <li><a href="">S'inscrire</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="menuIPhone">
+                <nav>
+                    <ul>
+                        <li><img src="Projet2-Reservia/images/logo/Reservia@3x.png" title="Reservia" alt="Logo Reservia" id="logo"></li>
+                        <li><a href="">S'inscrire</a></li>
+                        <li><a href="#hebergements">Hébergements</a></li>
+                        <li><a href="#activites">Activités</a></li>
                     </ul>
                 </nav>
             </div>
@@ -47,6 +58,7 @@
                 <form method="POST" action="traitement.php">
                     <input type="text" name="town" id="town">
                     <input type="submit" value="Rechercher">
+                    <span class="fas fa-search"></span>
                 </form>
 
                 <!--Filtre-->
