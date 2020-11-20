@@ -2,7 +2,7 @@
     font-family: 'Raleway', sans-serif;
 }
 
-body{       /*Tentative de gérer la disposition et les emplacements des parties du site*/
+body{       /*Gestion de la disposition et les emplacements des parties du site*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -19,7 +19,7 @@ header, section{
     display: none;
 }
 
-#logo{
+.logo{
     width: 100px;
 }
 
@@ -124,7 +124,7 @@ label[for]{
     align-items: center;
     justify-content: space-between;
     height: 2.75em;
-    border: 2px solid #a8a5a5;
+    border: 2px solid #F2F2F2;
     font: bold 1.2em 'Raleway', sans-serif;
     padding-right: 1%;
     border-radius: 40px;
@@ -258,11 +258,10 @@ article > p{
 
 figcaption p{
     font: 1.1em 'Raleway', sans-serif;
-    line-height: 0.5em;
 }
 
 aside figcaption p:last-child{
-    margin-top: 5.5em;
+    margin-top: 4em;
     font: 0.85em 'Raleway', sans-serif;
 }
 
@@ -271,7 +270,7 @@ aside figcaption p:last-child{
 }
 
 .fa-star-empty{
-    color: #bbbbbb;
+    color: #F2F2F2;
 }
 
 aside{      /*Disposition des éléments du aside*/
@@ -316,7 +315,7 @@ aside a:nth-of-type(2){
 }
 
 aside figcaption{
-    padding: 3% 10% 1% 11%;
+    padding: 3% 6% 1% 7%;
     font: 1em 'Raleway', sans-serif;
     line-height: normal;
     border-radius: 0 20px 20px 0;
@@ -414,6 +413,8 @@ footer div p{
 }
 /*Fin du Footer*/
 
+
+/*Tablette paysage*/
 @media screen and (min-width: 800px) and (max-width: 1024px){
 
     section:first-of-type{
@@ -504,6 +505,7 @@ footer div p{
 
 }
 
+/*Tablette portrait*/
 @media screen and (min-width: 400px) and (max-width: 800px){
 
     nav ul li:nth-of-type(1) a:focus{
@@ -512,6 +514,15 @@ footer div p{
 
     nav ul li:nth-of-type(2) a:focus{
         color: #0065FC;
+    }
+
+    form:last-of-type{
+        flex-wrap: wrap;
+    }
+
+    form:last-of-type label:last-of-type{
+        margin-top: 0.5em;
+        margin-left: 9%;
     }
 
     section:first-of-type{
@@ -564,6 +575,7 @@ footer div p{
 
 }
 
+/*Iphone*/
 @media screen and (max-width: 400px){
 
 
@@ -721,6 +733,10 @@ footer div p{
 
     figcaption p{
         font: 1em 'Raleway', sans-serif;
+    }
+
+    aside{
+        padding-bottom: 2em;
     }
     
     aside h2::after{

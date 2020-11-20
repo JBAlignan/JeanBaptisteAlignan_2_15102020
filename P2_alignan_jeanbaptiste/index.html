@@ -28,8 +28,8 @@
     <body>
 
         <header>
-            <div id="menuDesktop">
-                <img src="Projet2-Reservia/images/logo/Reservia@3x.png" title="Reservia" alt="Logo Reservia" id="logo">
+            <div id="menuDesktop"> <!--Première partie du menu; non visible pour Iphone-->
+                <img src="Projet2-Reservia/images/logo/Reservia@3x.png" title="Reservia" alt="Logo Reservia" class="logo">
                 <nav>
                     <ul>
                         <li><a href="#hebergements">Hébergements</a></li>
@@ -39,10 +39,10 @@
                 </nav>
             </div>
 
-            <div id="menuIPhone">
+            <div id="menuIPhone"> <!--Première partie du menu; visible uniquement pour l'IPhone-->
                 <nav>
                     <ul>
-                        <li><img src="Projet2-Reservia/images/logo/Reservia@3x.png" title="Reservia" alt="Logo Reservia" id="logo"></li>
+                        <li><img src="Projet2-Reservia/images/logo/Reservia@3x.png" title="Reservia" alt="Logo Reservia" class="logo"></li>
                         <li><a href="">S'inscrire</a></li>
                         <li><a href="#hebergements">Hébergements</a></li>
                         <li><a href="#activites">Activités</a></li>
@@ -256,7 +256,7 @@
         <!--Les activités de la ville-->
         <section>
             <h2 id="activites">Activités à Marseille</h2>
-                <div id="gridSectionDeux">
+                <div id="gridSectionDeux"><!--Grid en Desktop, Flexbox pour les autres supports-->
 
                     <figure id="ImageOne">
                         <a href=""><img src="Projet2-Reservia/images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port"></a>
@@ -276,8 +276,7 @@
                         <a href=""><img src="Projet2-Reservia/images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="&#206;les du Frioul"></a>                            
                         <figcaption>
                             <a href=""><h3>&#206;les du Frioul</h3></a>
-                        </figcaption>
-                        
+                        </figcaption>                       
                     </figure>
 
                     <figure id="ImageFour">
@@ -312,11 +311,13 @@
                 <p>Conditions générales de vente</p>
                 <p>Données et confidentialité</p>
             </div>
+
             <div>
             <h3>Nos hébergements</h3>
                 <p>Charte qualité</p>
                 <p>Soumettre votre hôtel</p>
             </div>
+
             <div>
             <h3>Assistance</h3>
                 <p>Centre d'aide</p>
@@ -324,7 +325,6 @@
             </div>
         </footer>
         
-
     </body>
 
 </html>
