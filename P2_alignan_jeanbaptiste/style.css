@@ -9,7 +9,6 @@ body{       /*Gestion de la disposition et les emplacements des parties du site*
     margin: 0 0;
 }
 
-
 /*CSS du Header*/
 header, section{
     margin: 0 2%;
@@ -27,27 +26,35 @@ header div:first-child{     /*Le Logo*/
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 2em;
 }
 
 nav ul{
     display: flex;
-    list-style-type: none;
+    justify-content: space-between;
+    width: 32em;
     margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 nav ul li{
-    margin: 0 30px;
-    padding: 30px 0;
+    text-align: center;
+    padding: 1em 1em;
 }
 
 a:link{
     text-decoration: none;
 }
 
+nav ul li a{
+    padding: 1.9em 1em;
+}
+
 nav ul li a:hover{
     color:  #0065FC;
     border-top: 2px solid  #0065FC;
-    padding-top: 2em;
+    margin-top: 3em;
 }
 
 a:visited{
@@ -193,67 +200,73 @@ header p:last-child::before{
 }
 /*Fin du CSS du header*/
 
-h2{
-    font: bold 1.2em 'Raleway', sans-serif;
-    margin: 2.5em 0 0.25em 2.5em;
+main section > h2{
+    font: bold 1.4em 'Raleway', sans-serif;
+    padding-left: 2em;
+    position: relative;
+    top: 4em;
 }
 
-section:first-of-type{      /*Première Section "Hébergements" et Les plus populaires*/
+
+main section:first-of-type > div{/*Première Section "Hébergements" et Les plus populaires*/
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 1em;
 }
 
 article{
-    width: 63%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 57.4em;
+    padding: 6.5em 1.5em 0 1.5em;
     border-radius: 20px;
     background-color: #F2F2F2;
 }
 
-article div{        /*Disposition des hébergements dans la div*/
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 0 2%;
-}
-
 article figure{
-    width: 28%;
-    margin-right: 1%;
-    margin-left: 1%;
-    border: 5px solid #FFFFFF;
+    width: 16.45em;
+    height: 14em;
+    margin: 0;
     border-radius: 20px;
-    background-color: #FFFFFF;
     box-shadow: 5px 5px 18px -3px #B4B9BA;
 }
 
-article div figure img{     /*Recouvrement des images dans figure(le contenant)*/
+article figure img{     /*Recouvrement des images dans figure(le contenant)*/
     width: 100%;
     height: 7.9em;
     object-fit: cover;
+    border: 5px solid #FFFFFF;
     border-radius: 20px 20px 0 0;
 }
 
 article figcaption{     /*Habillage CSS des légendes*/
-    border: 5px solid #FFFFFF;
+    position: relative;
+    bottom: 0.3em;
+    width: 17.95em;
+    height: 5.3em;
+    padding-top: 1em;
+    padding-left: 1em;
     border-radius: 0 0 20px 20px;
-    background-color: #FFFFFF;
     font: 0.9em 'Raleway', sans-serif;
+    background-color: #FFFFFF;
 }
 
 article figcaption h3{
-    font: bolder 1.4em 'Raleway', sans-serif;
+    font: bolder 1.3em 'Raleway', sans-serif;
     line-height: 0;
+    margin-top: 0em;
 }
 
 article figure p:last-of-type{
+    margin-top: 0.3em;
     font: bolder 0.85em 'Raleway', sans-serif;
-    margin-bottom: 0;
 }
 
 article > p{
-    font: bolder 1.1em 'Raleway', sans-serif;
-    margin: 2.1em 0 3em 3em;
+    position: relative;
+    right: 17em;
+    bottom: 1.3em;
+    align-self: center;
+    font: bolder 1.3em 'Raleway', sans-serif;
 }
 
 figcaption p{
@@ -261,8 +274,8 @@ figcaption p{
 }
 
 aside figcaption p:last-child{
-    margin-top: 4em;
-    font: 0.85em 'Raleway', sans-serif;
+    margin-top: 3.5em;
+    font: 0.8em 'Raleway', sans-serif;
 }
 
 .fa-star-full{
@@ -276,9 +289,15 @@ aside figcaption p:last-child{
 aside{      /*Disposition des éléments du aside*/
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 32em;
+    margin-left: 3%;
     border-radius: 20px;
     background-color: #F2F2F2;
+}
+
+aside h2{
+    font: bold 1.4em 'Raleway', sans-serif;
+    margin: 2em 0 0.7em 2.5em;
 }
 
 aside h2::after{
@@ -286,7 +305,7 @@ aside h2::after{
     font-weight: 900;
     font-size: 1em;
     content:"\f201";
-    margin-left: 48%;
+    margin-left: 7.3em;
 }
 
 aside div{      /*Disposition des hébergements dans la div du aside*/
@@ -299,8 +318,11 @@ aside figure {
     height: 11em;
     border: 5px solid #FFFFFF;
     border-radius: 20px;
-    background-color: #FFFFFF;
     box-shadow: 5px 5px 18px -3px #B4B9BA;
+}
+
+aside figure:last-of-type{
+    margin-bottom: 3em;
 }
 
 aside img{
@@ -310,20 +332,21 @@ aside img{
     border-radius: 20px 0 0 20px;
 }
 
-aside a:nth-of-type(2){
-    flex-grow: 2;
-}
-
 aside figcaption{
-    padding: 3% 6% 1% 7%;
+    height: 10em;
+    padding: 1em 2em 0 2em;
     font: 1em 'Raleway', sans-serif;
     line-height: normal;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 15px 15px 0;
     background-color: #FFFFFF;
 }
 
 aside h3{
-    margin-top: 0;
+    margin-top: 0.5em;
+}
+
+body section:nth-child(3){
+    margin-top: 2em;
 }
 
 body section:nth-child(3) figure{
@@ -342,26 +365,30 @@ section:nth-of-type(2) h2{
     margin: 2.3em 0 1.5em 0;
 }
 
-#gridSectionDeux{       /*Disposition des images de la section 2 par un display:grid*/
+.gridSectionDeux{       /*Disposition des images de la section 2 par un display:grid*/
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 125px 50px 100px;
-    grid-gap: 50px;
+    grid-template-rows: 11em 1em 10em;
+    grid-gap: 3em;
 }
 
-#gridSectionDeux figure, img{
+.gridSectionDeux figure, img{
     border-radius: 20px;
 }
 
-#gridSectionDeux figcaption{
+.gridSectionDeux figcaption{
     position: relative;
-    bottom: 3em;
+    bottom: 5em;
+    height: 3.8em;
     padding-left: 5%;
-    border: 5px solid #FFFFFF;
     border-radius: 0 0 20px 20px;
     box-shadow: 5px 5px 18px -3px #B4B9BA;
     background-color: #FFFFFF;
-    font: 0.70em 'Raleway', sans-serif;
+    font: 0.9em 'Raleway', sans-serif;
+}
+
+.gridSectionDeux figcaption h3{
+    padding-top: 1em;
 }
 
 #ImageOne{
@@ -417,15 +444,24 @@ footer div p{
 /*Tablette paysage*/
 @media screen and (min-width: 800px) and (max-width: 1024px){
 
-    section:first-of-type{
+    nav ul li a:focus{
+        color:  #0065FC;
+        border-top: 2px solid  #0065FC;
+        margin-top: 3em;
+    }
+
+    main section > div{
         display: flex;
         flex-direction: column-reverse;
     }
 
+    main section > h2{
+        top: 22.5em;
+    }
+
     aside{
         width: auto;
-        height: 23em;
-        margin-bottom: 1em;
+        margin: 0 0 1em 0;
     }
 
     aside h2::after{
@@ -433,23 +469,22 @@ footer div p{
         font-weight: 900;
         font-size: 1em;
         content: "\f201";
-        margin-left: 75%;
+        margin-left: 29.8em;
     }
 
     aside div{
-        display: flex;
-        flex-direction: row;
         justify-content: space-around;
-        padding: 0 2%
+        flex-direction: row;
     }
 
     aside figure{
         display: flex;
         flex-direction: column;
-        width: 28%;
+        width: 17.55em;
+        height: 15em;
         margin-right: 0;
         margin-left: 0;
-        border-radius: 20px 20px 0 0;
+        border-radius: 20px;
     }
 
     aside img{
@@ -458,62 +493,83 @@ footer div p{
         border-radius: 20px 20px 0 0;
     }
 
-    h3{
-        font-size: 1.4em;
-        line-height: 1;
-    }
-
     aside figcaption{
         position: relative;
-        margin-right: -0.3em;
-        margin-left: -0.3em;
-        padding: 0;
-        border: 5px solid #FFFFFF;
-        border-radius: 0 0 20px 20px;
-        box-shadow: 5px 5px 18px -3px #B4B9BA;;
-        background-color: #FFFFFF;
+        bottom: 0.2em;
+        height: 6.5em;
+        padding-top: 1.2em;
+        padding-bottom: 0.5em;
+        padding-left: 1em;
+        border-radius: 0 0 15px 15px;
         font: 0.9em 'Raleway', sans-serif;
     }
 
-    aside figure:nth-of-type(odd) figcaption h3{
-        margin-bottom: 1.8em;
+    aside figure figcaption h3{
+        font: bolder 1.3em 'Raleway', sans-serif;
+        line-height: normal;
+        line-height: 0;
+        margin-top: 0 ;
+    }
+
+    aside figure:nth-of-type(2) figcaption{
+        height: 7.2em;
+        padding-top: 0.5em;
     }
 
     aside figure:nth-of-type(2) figcaption h3{
-        margin-bottom: 0.5em;
+        line-height: normal;
     }
 
-    aside figcaption p:last-of-type{
-        margin-top: 1em;
-        margin-bottom: 0;
+    aside figure:nth-of-type(2) figcaption p{
+        line-height: 0;
+
+    }
+
+    aside figure p:last-of-type{
+        margin-top: 3em;
+        font: bolder 0.85em 'Raleway', sans-serif;
+    }
+
+    aside figure:nth-of-type(2) figcaption p:last-of-type{
+    margin-top: 1.9em;
     }
 
     article{
         width: auto;
+        height: 37em;
     }
 
-    #gridSectionDeux{
+    article figure{
+        width: 17.55em;
+    }
+
+    article figcaption{
+        width: 19.15em;
+    }
+
+    .gridSectionDeux{
         display: flex;
         flex-wrap: wrap;
     }
 
-    section:last-of-type div figure{
-        width: 44%;
-        height: 13em;
+    .gridSectionDeux figure{
+        width: 28em;
+        height: 18em;
     }
-
 
 }
 
 /*Tablette portrait*/
-@media screen and (min-width: 400px) and (max-width: 800px){
+@media screen and (min-width: 400px) and (max-width: 799px){
 
-    nav ul li:nth-of-type(1) a:focus{
-        color: #0065FC;
+    nav ul{
+        justify-content: flex-end;
     }
 
-    nav ul li:nth-of-type(2) a:focus{
-        color: #0065FC;
+    nav ul li a:focus{
+        color:  #0065FC;
+        border-top: 2px solid  #0065FC;
+        margin-top: 3em;
     }
 
     form:last-of-type{
@@ -525,64 +581,148 @@ footer div p{
         margin-left: 9%;
     }
 
-    section:first-of-type{
+    main section > h2{
+        top: 37em;
+    }
+
+    main section > div{
         display: flex;
         flex-direction: column-reverse;
     }
 
+    main section aside div{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    aside figure:first-of-type{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        justify-self: center;
+    }
+
+    aside figure:nth-of-type(2){
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        justify-self: center;
+    }
+
+    aside figure:last-of-type{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        justify-self: center;
+    }
+
     aside{
-        width: 100%;
-        margin-right: 0;
-        margin-left: 0;
+        width: auto;
+        margin: 0 0 1em 0;
     }
 
     aside h2::after{
-        margin-left: 47%;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 1em;
+        content: "\f201";
+        margin-left: 18.2em;
     }
 
     aside figure{
-        width: 32em;
+        display: flex;
+        flex-direction: column;
+        width: 17.55em;
+        height: 15em;
+        margin-right: 0;
+        margin-left: 0;
+        border-radius: 20px;
     }
 
-    aside figure:nth-of-type(odd) p:last-of-type{
-        line-height: 4.6em;
+    aside img{
+        width: 100%;
+        height: 7.9em;
+        border-radius: 20px 20px 0 0;
     }
 
     aside figcaption{
-        padding-left: 5%;
+        position: relative;
+        bottom: 0.2em;
+        height: 6.5em;
+        padding-top: 1.2em;
+        padding-bottom: 0.5em;
+        padding-left: 1em;
+        border-radius: 0 0 15px 15px;
+        font: 0.9em 'Raleway', sans-serif;
+    }
+
+    aside figure figcaption h3{
+        font: bolder 1.3em 'Raleway', sans-serif;
+        line-height: normal;
+        line-height: 0;
+        margin-top: 0 ;
+    }
+
+    aside figure:nth-of-type(2) figcaption{
+        height: 7.2em;
+        padding-top: 0.5em;
+    }
+
+    aside figure:nth-of-type(2) figcaption h3{
+        line-height: normal;
+    }
+
+    aside figure:nth-of-type(2) figcaption p{
+        line-height: 0;
+    }
+
+    aside figure p:last-of-type{
+        margin-top: 3em;
+        font: bolder 0.85em 'Raleway', sans-serif;
+    }
+
+    aside figure:nth-of-type(2) figcaption p:last-of-type{
+        margin-top: 1.9em;
     }
 
     article{
-        width: 100%;
+        width: auto;
         margin-top: 2em;
         margin-right: 0;
         margin-left: 0;
     }
 
     article figure{
-        width: 44%;
+        width: 17.55em;
+        margin: 1em;
     }
 
-    #gridSectionDeux{
+    article figcaption{
+        width: 19.15em;
+    }
+
+    article > p{
+        right: 12em;
+        bottom: 0.3em;
+    }
+
+    .gridSectionDeux{
         display: flex;
         flex-wrap: wrap;
     }
 
-    section:last-of-type div figure{
-        width: 44%;
-        height: 13em;
+    .gridSectionDeux figure{
+        width: 21em;
+        height: 18em;
     }
-
 }
 
 /*Iphone*/
-@media screen and (max-width: 400px){
+@media screen and (max-width: 399px){
 
 
     header{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 1em;
     }
 
     #menuDesktop{
@@ -591,24 +731,33 @@ footer div p{
 
     #menuIPhone{
         display: block;
+        width: 100%;
     }
 
     nav ul{
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
         padding: 0;
     }
 
     nav ul li{
         width: 50%;
-        margin: 0;
         padding: 0;
     }
 
+    nav ul li:first-of-type{
+        text-align: start;
+        align-self: center;
+    }
+
+    .logo{
+        margin-left: 1em;
+    }
+
     nav ul li:nth-of-type(2){
-        display: flex;
-        justify-content: end;
-        align-items: center;
+        text-align: end;
+        align-self: center;
     }
 
     nav ul li:nth-of-type(2) a{
@@ -617,23 +766,18 @@ footer div p{
     }
 
     nav ul li:nth-of-type(1n+3){
-        height: 2em;
-        text-align: center;
-        border-bottom: 3px solid #F2F2F2;
-        margin-top: 1.5em;
         font: bold 1.1em 'Raleway', sans-serif;
     }
 
     nav ul li:nth-of-type(1n+3) a{
         display: block;
         color: black;
-        width: 100%;
+        border-bottom: 3px solid #F2F2F2;
     }
 
     nav ul li:nth-of-type(1n+3) a:focus{
         color: #0065FC;
         border-bottom: 3px solid #0065FC;
-        padding-bottom: 0.8em;
     }
 
     h1{
@@ -710,37 +854,49 @@ footer div p{
         width: 1.4em;
     }
 
-    section, article, section div, #gridSectionDeux, footer{
+    section, section div, article, .gridSectionDeux, footer{
         display: flex;
         flex-direction: column;
         margin-left: 0;
         margin-right: 0;
     }
 
-    section:first-of-type{
-        display: flex;
+    main section > div{
         flex-direction: column-reverse;
     }
 
     aside, article{
-        width: 100%;
+        width: auto;
+        padding: 0;
         border-radius: 0;
     }
 
     h2{
-        margin: 1.5em 0 1.5em 1em;
+        margin-bottom: 1.5em;
     }
 
     figcaption p{
         font: 1em 'Raleway', sans-serif;
     }
 
+    main section > h2{
+        top: 34.5em;
+        margin-top: 1em;
+        padding-left: 1em;
+    }
+
     aside{
+        margin-bottom: 4em;
+        margin-left: 0;
         padding-bottom: 2em;
+    }
+
+    aside h2{
+        margin-left: 0.5em;
     }
     
     aside h2::after{
-        margin-left: 6.5em;
+        margin-left: 8.5em;
         font-size: 1.1em;
     }
 
@@ -749,17 +905,23 @@ footer div p{
     }
 
     aside figure{
+        display: flex;
         height: 9em;
     }
 
     aside img{
-        width: 8em;
-        height: 9em
+        width: 8.5em;
+        height: 9em;
+        border-radius: 15px 0 0 15px;
     }
 
     aside figcaption{
-        padding: 4% 10% 1% 7%;
-        font-size: 0.95em;
+        height: 8.5em;
+        padding: 0.5em 0 0 1em;
+    }
+
+    aside h3{
+        margin-top: 0;
     }
     
     aside figcaption p:last-child{
@@ -771,24 +933,44 @@ footer div p{
     }
 
     article figure{
-        width: 21em;
-        margin: 0.5em;
+        width: 20em;
+        height: 12em;
+        margin: 0.6em 1.5em;
+    }
+
+    article img{
+        width: 97%;
+        height: 7.9em;
+    }
+
+    article figcaption{
+        width: 21.9em;
+        height: 4.3em;
+        bottom: 1.3em;
+    }
+
+    article p:first-of-type{
+        margin-bottom: 0;
     }
 
     article > p{
-    margin: 2.0em 0 0 1em;
+    position: static;
+    align-self: start;
+    margin-left: 0.5em;;
     }
 
-    section:nth-of-type(2){
+    body section:nth-child(3){
         margin-left: 1em;
         margin-right: 1em;
     }
 
-    section:nth-of-type(2) figure{
-        height: 14.1em;
+    body section:nth-child(3) figure{
+        width: 20em;
+        height: 12em;
+        margin: 0em 0.8em;
     }
 
-    #gridSectionDeux figcaption {
+    body section:nth-child(3) figcaption {
         font: 1em 'Raleway', sans-serif;
     }
 
