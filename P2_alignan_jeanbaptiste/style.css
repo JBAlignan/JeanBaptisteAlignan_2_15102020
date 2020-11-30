@@ -3,28 +3,38 @@
 }
 
 #logo{
-    width: 100px;
-    height: 60px;
+    width: 150px;
+    border: 2px solid sienna;
 }
 
-#navOne{
+header div:first-child{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border: 1px solid green;
+}
+
+nav{
+    border: 1px solid hotpink;
 }
 
 nav ul{
     display: flex;
     list-style-type: none;
-    margin: 0 0 0 0;
+    margin: 0;
     border: 1px solid black;
 }
 
 nav ul li{
-    margin: 0 30px 0 30px;
-    padding: 30px 0 20px 0;
+    margin: 0 30px;
+    padding: 30px 0;
 }
 
-#searchTown{
+h1{
+    font: bold 1.2em 'Raleway', sans-serif;
+}
+
+form{
     display: flex;
     align-items: center;
     border: 1px solid black;
@@ -33,31 +43,84 @@ nav ul li{
 #placeholder{
     margin-right: 0;
     margin-left: 0;
+    padding: 6px 10px 6px 10px;
+    background-color:  #F2F2F2;
+    border-radius: 15px 0 0 15px;
+    border: 1px solid black;
 }
 
-#sectionOne{
+input[type="text"]{
+    padding: 10px 0 10px 0;
+}
+
+input[type="submit"]{
+    background-color: #0065FC;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 0 15px 15px 0;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+label[for]{
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+    font: bold 1.2em 'Raleway', sans-serif;
+    padding: 5%;
+    border-radius: 40px;
+}
+
+label img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 50px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+section{
     border: 2px solid blue;
     display: flex;
     justify-content: space-around;
 }
 
-.container{
-    width: 60%;
+article{
     background-color: #F2F2F2;
     border: 1px solid black;
-}
-.containerTwo{
-    width: 30%;
-    background-color: #F2F2F2;
-    border: 1px solid black;
+    width: 66%;
 }
 
-.lodging{
+article div{
+    border: 1px solid green;
     display: flex;
-    }
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
-.imageTown{
-    width: 33%;
+figure{
+    width: 300px;
+    height: 200px;
+}
+
+article div figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+figcaption{
+    position: relative;
+    bottom:100px;
+    background-color: #FFFFFF;
+}
+
+.containerTwo{
+    background-color: #F2F2F2;
     border: 1px solid black;
 }
 
@@ -65,6 +128,11 @@ nav ul li{
     display: flex;
     justify-content: space-around;
     border: 1px solid black;
+}
+
+.imageTown img{
+    width: 100%;
+     object-fit: cover;
 }
 
 footer{
