@@ -14,21 +14,24 @@ header, section{
     margin: 0 2%;
 }
 
+/*Version visible pour IPhone*/
 #menuIPhone{
     display: none;
 }
 
+/*Taille et emplacement du logo*/
 .logo{
     width: 100px;
 }
 
-header div:first-child{     /*Le Logo*/
+header div:first-child{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 2em;
 }
 
+/*Disposition et affichage du menu de navigaion*/
 nav ul{
     display: flex;
     justify-content: space-between;
@@ -67,7 +70,7 @@ ul li:last-child a{
     color: #0065FC;
 }
 
-h1{
+h1{ /*Titre principal du site*/
     font: bold 1.2em 'Raleway', sans-serif;
 }
 
@@ -76,11 +79,12 @@ form{
     align-items: center;
 }
 
+/*Premier formulaire: Barre de Recherche*/
 form:first-of-type{
     margin-bottom: 2em;
 }
 
-form:first-of-type::before{
+form:first-of-type::before{ /*Icône Localisation*/
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -108,7 +112,7 @@ input[type="submit"]{
     border-radius: 0 10px 10px 0;
 }
 
-.fa-search::before{
+.fa-search::before{    /*Icône de loupe pour version IPhone; non visible pour les autres tailles d'écran*/
     display: none;
 }
 
@@ -118,7 +122,7 @@ form p{
     margin-left: 1%;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"]{ /*Display: none pour les checkbox*/
     display: none;
 }
 
@@ -126,7 +130,7 @@ header form:last-child{     /*La barre de Recherche*/
     display: flex;
 }
 
-label[for]{
+label[for]{ /*Apparence des options des filtres*/
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -144,7 +148,7 @@ label[for]:hover{
     background-color: #0065FC;
 }
 
-form>label::before{
+form>label::before{ /*affichage des icônes des options des filtres*/
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -177,7 +181,7 @@ label:last-child::before{
     content: "\f6d3";
 }
 
-header p:last-child::before{
+header p:last-child::before{ /*Icône ! avant le dernier paragraphe du Header*/
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -193,120 +197,125 @@ header p:last-child::before{
     content: "\f129";
 }
 
-header p:last-child{
+header p:last-child{ /*Dernier paragraphe du header*/
     display: flex;
     align-items: center;
     font: 0.9em 'Raleway', sans-serif;
 }
-
 /*Fin du CSS du header*/
 
-main section > h2{
+/*Première section*/
+main section:first-of-type{
+    width: auto;
+}
+
+main section > h2{ /*Titre de la première section "Hébergements"; titre de l'article pour l'utilisateur, gestion de la poistion et de la taille*/
     font: bold 1.4em 'Raleway', sans-serif;
     padding-left: 2em;
     position: relative;
     top: 4em;
 }
 
-
-main section:first-of-type > div{/*Première Section "Hébergements" et Les plus populaires*/
+main section:first-of-type > div{/*Première Section article + aside  ("Hébergements" et "Les plus populaires")*/
     display: flex;
 }
 
 article{
+        width: 97%;
+}
+
+article div{ /*Gestion des contenus de la div en flex; gestion de l'apparence de la div*/
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 57.4em;
-    padding: 6.5em 1.5em 0 1em;
-    border-radius: 20px;
+    padding: 6.5em 1.5% 0 1%;
+    border-radius: 20px 20px 0 0;
     background-color: #F2F2F2;
 }
 
-article figure{
-    width: 16.45em;
+article figure{ /*Gestion de la taille et box-shadow des figures*/
+    width: 30.45%;
     height: 14em;
     margin: 0;
+    margin-bottom: 3em;
     border-radius: 20px;
     box-shadow: 5px 5px 18px -3px #B4B9BA;
 }
 
 article figure img{     /*Recouvrement des images dans figure(le contenant)*/
     width: 100%;
-    height: 7.9em;
+    height: 8.9em;
     object-fit: cover;
     border: 5px solid #FFFFFF;
     border-radius: 20px 20px 0 0;
 }
 
-article figcaption{     /*Habillage CSS des légendes*/
+article figcaption{     /*Taille, couleur, et positionnement des légendes de l'article*/
     position: relative;
     bottom: 0.3em;
-    width: 17.95em;
+    width: 98.1%;
     height: 5.3em;
     padding-top: 1em;
-    padding-left: 1em;
+    padding-left: 5.5%;
     border-radius: 0 0 20px 20px;
     font: 0.9em 'Raleway', sans-serif;
     background-color: #FFFFFF;
 }
 
-article figcaption h3{
+article figcaption h3{ /*Titre des légendes*/
     font: bolder 1.3em 'Raleway', sans-serif;
     line-height: 0;
     margin-top: 0em;
 }
 
-article figure p:last-of-type{
+article figure p:last-of-type{ /*Gestion emplacement des tailles des étoiles (notation) dans les légendes de l'article*/
     margin-top: 0.3em;
     font: bolder 0.85em 'Raleway', sans-serif;
 }
 
-article > p{
-    position: relative;
-    right: 17em;
-    bottom: 1.3em;
-    align-self: center;
+article > p{ /*Taille et position de "Afficher plus"*/
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1em;
+    padding-left: 4%;
+    padding-bottom: 8.6%;
+    border-radius: 0 0 20px 20px;
     font: bolder 1.3em 'Raleway', sans-serif;
+    background-color: #F2F2F2;
 }
 
-figcaption p{
+figcaption p{ /*Balise p des légendes article, aside et de la section 2*/
     font: 1.1em 'Raleway', sans-serif;
 }
 
-aside figcaption p:last-child{
-    margin-top: 3.5em;
-    font: 0.8em 'Raleway', sans-serif;
-}
-
-.fa-star-full{
+.fa-star-full{ /*Etoiles bleues*/
     color:#0065FC;
 }
 
-.fa-star-empty{
+.fa-star-empty{ /*Etoiles Grises*/
     color: #F2F2F2;
 }
 
 aside{      /*Disposition des éléments du aside*/
     display: flex;
     flex-direction: column;
-    width: 32em;
-    margin-left: 3em;
+    width: 49%;
+    margin-left: 3%;
     border-radius: 20px;
     background-color: #F2F2F2;
 }
 
 aside h2{
     font: bold 1.4em 'Raleway', sans-serif;
-    margin: 2em 0 0.7em 2.5em;
+    margin: 2em 0 0.7em 8.5%;
 }
 
-aside h2::after{
+aside h2::after{    /*Icones de flèche*/
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 1em;
     content:"\f201";
-    margin-left: 7.3em;
+    margin-left: 41%;;
 }
 
 aside div{      /*Disposition des hébergements dans la div du aside*/
@@ -314,15 +323,16 @@ aside div{      /*Disposition des hébergements dans la div du aside*/
     flex-direction: column;
 }
 
-aside figure {
+aside figure {  /*Gestion de la taille et box-shadow des figures*/
     display: flex;
+    width: 85%;
     height: 11em;
     border: 5px solid #FFFFFF;
     border-radius: 20px;
     box-shadow: 5px 5px 18px -3px #B4B9BA;
 }
 
-aside figure:last-of-type{
+aside figure:last-of-type{ /*Gestion de la marge inférieure de la figure dans sa div (conteneur)*/
     margin-bottom: 3em;
 }
 
@@ -334,8 +344,7 @@ aside img{
 }
 
 aside figcaption{
-    height: 10em;
-    padding: 1em 2em 0 2em;
+    padding: 1em 4.5% 0 8%;
     font: 1em 'Raleway', sans-serif;
     line-height: normal;
     border-radius: 0 15px 15px 0;
@@ -343,9 +352,20 @@ aside figcaption{
 }
 
 aside h3{
-    margin-top: 0.5em;
+    margin-top: 0;
 }
 
+aside figcaption p{
+    line-height: 0.25;
+}
+
+aside figcaption p:last-child{
+    margin-top: 5.5em;
+    font: 0.8em 'Raleway', sans-serif;
+}
+/*Fin de la première section*/
+
+/*Début de la seconde section*/
 body section:nth-child(3){
     margin-top: 2em;
 }
@@ -361,7 +381,7 @@ body section:nth-child(3) img{
     object-fit: cover;
 }
 
-section:nth-of-type(2) h2{
+section:nth-of-type(2) h2{ /*Titre de la seconde section*/
     font: bold 1.2em 'Raleway', sans-serif;
     margin: 2.3em 0 1.5em 0;
 }
@@ -373,11 +393,11 @@ section:nth-of-type(2) h2{
     grid-gap: 3em;
 }
 
-.gridSectionDeux figure, img{
+.gridSectionDeux figure, img{ /*Gestion des images*/
     border-radius: 20px;
 }
 
-.gridSectionDeux figcaption{
+.gridSectionDeux figcaption{  /*Gestion des légendes*/
     position: relative;
     bottom: 5em;
     height: 3.8em;
@@ -388,7 +408,7 @@ section:nth-of-type(2) h2{
     font: 0.9em 'Raleway', sans-serif;
 }
 
-.gridSectionDeux figcaption h3{
+.gridSectionDeux figcaption h3{  /*Gestion des titres des légendes*/
     padding-top: 1em;
 }
 
@@ -421,6 +441,7 @@ section:nth-of-type(2) h2{
     grid-column: 4 / 5;
     grid-row: 2 / 4;
 }
+/*Fin de la deuxième section*/
 
 /*Footer*/
 footer{
@@ -441,17 +462,207 @@ footer div p{
 }
 /*Fin du Footer*/
 
+/*Partie media queries*/
 
-/*Grand écran*/
-@media screen and (min-width: 1920px){
+/*Ecran 4K (Mdn)*/
+@media screen and (min-width: 3840px){
+
+    .logo{
+        width: 300px;
+    }
+
+    nav ul{
+        width: 65em;
+        padding-right: 2em;
+    }
+    
+    nav ul li{
+        font: 2.7em 'Raleway', sans-serif;
+    }
+
+    nav ul li a:hover{
+        border-top: 4px solid  #0065FC;
+    }
+
+    nav ul li a{
+        padding-top: 1em;
+    }
+
+    h1{
+        font: bold 3em 'Raleway', sans-serif;
+    }
+
+    h1 + p{
+        font: 2.6em 'Raleway', sans-serif;
+    }
+
+    form:first-of-type::before{
+        font-size: 4em;
+        border-radius: 30px 0 0 30px;
+    }
+
+    input[type="text"]{
+        width: 60em;
+        height: 11.6em;
+        border: 3px solid #F2F2F2;
+    }
+
+    input[type="submit"]{
+        height: 3.7em;
+        font-size: 2.7em;
+    }
+
+    form p{
+        font-size: 2.4em;
+    }
+
+    form > label::before{
+        transform: translateX(-0.5em);
+    }
+
+    label[for]{
+        padding-right: 1.1em;
+        border-radius: 40px;
+        font-size: 2.4em;
+        border: 3px solid #F2F2F2;
+    }
+
+    header p:last-child{
+        font-size: 1.9em ;
+    }
+
+    main section > h2{
+        width: 65.45%;
+        padding-top: 2em;
+        border-radius: 20px 20px 0 0; 
+        background-color: #F2F2F2;
+        font-size: 2.8em;
+    }
+
+    article{
+        width: 70%;
+        padding-top: 7.5em
+    }
+
+    article figure{
+        width: 27%;
+        height: 25em;
+    }
+    
+    article figure img{
+        height: 15em;
+    }
+
+    article figure p:last-of-type{
+        font-size: 1em;
+    }
+    
+    article figcaption{
+        width: 95.9%;
+        font-size: 1.5em;
+    }
+    
+    article figcaption h3{
+        font: bolder 1.3em 'Raleway', sans-serif;
+        line-height: 0;
+        margin-top: 0em;
+    }
+    
+    article > p{
+        font-size: 2.8em;
+    }
+
+    aside{
+        width: 30%;
+    }
+
+    aside h2::after{
+        margin-left: 8.5em;
+        font-size: 1.2em;
+    }
+
+    aside figure{
+        height: 20em;
+    }
+
+    aside img{
+        width: 22em;
+        height: 20em;
+    }
+
+    aside figcaption{
+        width: 54%;
+        height: 10.8em;
+        font-size: 1.7em;
+    }
+
+    aside figcaption p:last-child{
+        margin-top: 0;
+        font-size: 0.9em;
+        line-height: 10;
+    }
+
+    aside figure:nth-of-type(odd) p:last-of-type{
+        line-height: 13;
+    }
+
+    section h2{
+        font-size: 2.8em;
+    }
+
+    .gridSectionDeux{
+        grid-template-rows: 15em 5em 14em;
+    }
+
+    .gridSectionDeux figcaption{
+        bottom: 4.5em;
+        height: 3.8em;
+        font-size: 2em;
+    }
+
+    footer{
+        font-size: 1.8em;
+    }
+
+}
+
+/*Ecran 4k (Chrome)*/
+@media screen and (min-width: 2560px) and (max-width: 3839px){
+    main section > h2{
+        width: 61%;
+    }
+
+    aside h2::after{
+        margin-left: 55%;
+    }
+
+    aside div{
+        align-items: center;
+    }
+
+    aside figure{
+        width: 75%;
+    }
+
+    aside img{
+        width: 12em;
+    }
+
+    aside figcaption{
+        width: 56%;
+    }
+}
+
+/*Grand écran; 1080 Full HD (Mdn); */
+@media screen and (min-width: 1920px) and (max-width: 2559px){
+   
 
     .logo{
         width: 200px;
     }
 
     nav ul{
-        width: 42em;
-        padding-right: 2em;
+        width: 50em;
     }
     
     nav ul li{
@@ -462,27 +673,32 @@ footer div p{
         border-top: 4px solid  #0065FC;
     }
 
+    nav ul li a{
+        padding-top: 1.5em;
+    }
+
     h1{
-        font: bold 2em 'Raleway', sans-serif;
+        font: bold 2.3em 'Raleway', sans-serif;
     }
 
     h1 + p{
-        font: 1.6em 'Raleway', sans-serif;
+        font: 2em 'Raleway', sans-serif;
     }
 
     form:first-of-type::before{
         font-size: 2em;
+        border-radius: 20px 0 0 20px;
     }
 
     input[type="text"]{
         width: 40em;
-        height: 5.7em;
-        border: 1px solid #F2F2F2;
+        height: 5.4em;
+        border: 3px solid #F2F2F2;
     }
 
     input[type="submit"]{
-        height: 2.8em;
-        font-size: 1.8em;
+        height: 2.9em;
+        font-size: 1.7em;
     }
 
     form p{
@@ -497,28 +713,34 @@ footer div p{
         padding-right: 1.1em;
         border-radius: 40px;
         font-size: 1.7em;
+        border: 3px solid #F2F2F2;
     }
 
     header p:last-child{
-        font-size: 1.5em ;
+        font-size: 1.3em ;
     }
 
     main section > h2{
-        font-size: 1.7em;
+        width: 60.4%;
+        padding-top: 2em;
+        padding-left: 1.5em;
+        border-radius: 20px 20px 0 0; 
+        background-color: #F2F2F2;
+        font-size: 2em;
     }
 
     article{
-        width: 66em;
-        padding-top: 7.5em
+        width: 63%;
+        padding-top: 3.7em
     }
 
     article figure{
-        width: 19em;
-        height: 19em;
+        width: 31%;
+        height: 20.7em;
     }
     
     article figure img{
-        height: 10.9em;
+        height: 12em;
     }
 
     article figure p:last-of-type{
@@ -526,8 +748,8 @@ footer div p{
     }
     
     article figcaption{
-        width: 15.3em;
-        font-size: 1.2em;
+        width: 97.3%;
+        font-size: 1.3em;
     }
     
     article figcaption h3{
@@ -537,21 +759,16 @@ footer div p{
     }
     
     article > p{
-        right: 13em;
-        bottom: 1em;
-        font-size: 1.8em;
+        font-size: 2em;
     }
 
     aside{
-        width: 44em;
-    }
-
-    aside h2{
-        font-size: 1.7em;
+        width: 34%;
     }
 
     aside h2::after{
-        margin-left: 12.5em;
+        margin-left: 6.5em;
+        font-size: 1em;
     }
 
     aside figure{
@@ -559,26 +776,27 @@ footer div p{
     }
 
     aside img{
-        width: 17em;
+        width: 14em;
         height: 14em;
     }
 
     aside figcaption{
-        width: 14em;
-        height: 9.9em;
-        font-size: 1.3em;
+        width: 56%;
+        height: 9em;
+        font-size: 1.4em;
     }
 
     aside figcaption p:last-child{
-        margin-top: 3em;
+        margin-top: 0;
         font-size: 0.9em;
+        line-height: 6;
     }
 
     aside figure:nth-of-type(odd) p:last-of-type{
-        margin-top: 3em;
+        line-height: 6;
     }
 
-    section:last-of-type h2{
+    section h2{
         font-size: 2em;
     }
 
@@ -594,11 +812,10 @@ footer div p{
 
     footer{
         font-size: 1.6em;
-    }
-
+    } 
 }
 
-/*Tablette paysage*/
+/*Tablette paysage; Ipad GalaxyS9 portrait (Mdn); Laptop (Chrome)*/
 @media screen and (min-width: 800px) and (max-width: 1024px){
 
     nav ul li a:focus{
@@ -621,12 +838,16 @@ footer div p{
         margin: 0 0 1em 0;
     }
 
+    aside h2{
+        margin-left: 2.5%;
+    }
+
     aside h2::after{
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
         font-size: 1em;
         content: "\f201";
-        margin-left: 29.8em;
+        margin-left: 74%;
     }
 
     aside div{
@@ -637,7 +858,7 @@ footer div p{
     aside figure{
         display: flex;
         flex-direction: column;
-        width: 17.55em;
+        width: 28.55%;
         height: 15em;
         margin-right: 0;
         margin-left: 0;
@@ -683,7 +904,7 @@ footer div p{
     }
 
     aside figure p:last-of-type{
-        margin-top: 3em;
+        margin-top: 4.4em;
         font: bolder 0.85em 'Raleway', sans-serif;
     }
 
@@ -704,20 +925,28 @@ footer div p{
         width: 19.15em;
     }
 
+    article > p{
+        padding-bottom: 2.6em;
+    }
+
+    body section:nth-child(3){
+        margin-top: 28em;
+    }
+
     .gridSectionDeux{
         display: flex;
         flex-wrap: wrap;
     }
 
     .gridSectionDeux figure{
-        width: 28em;
+        width: 46%;
         height: 18em;
     }
 
 }
 
-/*Tablette portrait*/
-@media screen and (min-width: 400px) and (max-width: 799px){
+/*Tablette portrait; Ipad GalaxyS9 portrait (Mdn); Tablet 768px (Chrome)*/
+@media screen and (min-width: 427px) and (max-width: 799px){
 
     nav ul{
         justify-content: flex-end;
@@ -735,7 +964,7 @@ footer div p{
 
     form:last-of-type label:last-of-type{
         margin-top: 0.5em;
-        margin-left: 9%;
+        margin-left: 10.5%;
     }
 
     main section > h2{
@@ -743,7 +972,6 @@ footer div p{
     }
 
     main section > div{
-        display: flex;
         flex-direction: column-reverse;
     }
 
@@ -780,13 +1008,13 @@ footer div p{
         font-weight: 900;
         font-size: 1em;
         content: "\f201";
-        margin-left: 18.2em;
+        margin-left: 60%;
     }
 
     aside figure{
         display: flex;
         flex-direction: column;
-        width: 17.55em;
+        width: 75%;
         height: 15em;
         margin-right: 0;
         margin-left: 0;
@@ -805,14 +1033,13 @@ footer div p{
         height: 6.5em;
         padding-top: 1.2em;
         padding-bottom: 0.5em;
-        padding-left: 1em;
+        padding-left: 4%;
         border-radius: 0 0 15px 15px;
         font: 0.9em 'Raleway', sans-serif;
     }
 
     aside figure figcaption h3{
         font: bolder 1.3em 'Raleway', sans-serif;
-        line-height: normal;
         line-height: 0;
         margin-top: 0 ;
     }
@@ -831,7 +1058,7 @@ footer div p{
     }
 
     aside figure p:last-of-type{
-        margin-top: 3em;
+        margin-top: 4.5em;
         font: bolder 0.85em 'Raleway', sans-serif;
     }
 
@@ -844,6 +1071,10 @@ footer div p{
         margin-top: 2em;
         margin-right: 0;
         margin-left: 0;
+    }
+
+    article div{
+        padding: 6em 0 0 0;
     }
 
     article figure{
@@ -863,16 +1094,17 @@ footer div p{
     .gridSectionDeux{
         display: flex;
         flex-wrap: wrap;
+        margin-left: 1%;
     }
 
     .gridSectionDeux figure{
-        width: 21em;
+        width: 46%;
         height: 18em;
     }
 }
 
-/*Iphone*/
-@media screen and (max-width: 399px){
+/*Iphone 6/7/8 iOS11 Safari (Mdn); Mobile M/L (Chrome)*/
+@media screen and (max-width: 426px){
 
 
     header{
@@ -967,7 +1199,6 @@ footer div p{
         margin-right: -3%;
     }
 
-
     input[type="submit"]{
         display: none;       
     }
@@ -1038,7 +1269,7 @@ footer div p{
     }
 
     main section > h2{
-        top: 34.5em;
+        top: 32.5em;
         margin-top: 1em;
         padding-left: 1em;
     }
@@ -1046,7 +1277,6 @@ footer div p{
     aside{
         margin-bottom: 4em;
         margin-left: 0;
-        padding-bottom: 2em;
     }
 
     aside h2{
@@ -1054,7 +1284,7 @@ footer div p{
     }
     
     aside h2::after{
-        margin-left: 8.5em;
+        margin-left: 31%;
         font-size: 1.1em;
     }
 
@@ -1086,25 +1316,29 @@ footer div p{
         margin-top: 2.5em;
     }
 
-    article{
+    article div{
         background-color: #FFFFFF;
+        padding: 0;
+        padding-top: 2.5em;
     }
 
     article figure{
-        width: 20em;
-        height: 12em;
+        width: 84%;
+        height: 13em;
         margin: 0.6em 1.5em;
     }
 
     article img{
         width: 97%;
         height: 7.9em;
+        box-shadow: 5px 5px 18px -3px #B4B9BA;
     }
 
     article figcaption{
-        width: 21.9em;
+        width: 97.5%;
         height: 4.3em;
         bottom: 1.3em;
+        box-shadow:     5px 5px 18px -3px #B4B9BA;
     }
 
     article p:first-of-type{
@@ -1112,20 +1346,20 @@ footer div p{
     }
 
     article > p{
-    position: static;
-    align-self: start;
-    margin-left: 0.5em;;
+    margin-top: 1em;
+    margin-left: 3.5%;
+    background-color: #FFFFFF;
     }
 
     body section:nth-child(3){
-        margin-left: 1em;
-        margin-right: 1em;
+        margin-left: 1%;
+        margin-right: 1%;
     }
 
     body section:nth-child(3) figure{
-        width: 20em;
+        width: 93%;
         height: 12em;
-        margin: 0em 0.8em;
+        margin: 0 3.5%;
     }
 
     body section:nth-child(3) figcaption {
@@ -1134,6 +1368,6 @@ footer div p{
 
     footer{
         margin: 5em 0 0 0;
-        padding: 1em 0 2em 1em;
+        padding: 1em 0 2em 10%;
     }
 }
